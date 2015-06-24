@@ -1,0 +1,27 @@
+<object> ::= '{' '}'
+          |  '{' <objPairList> '}'
+
+<objPairList> ::= <objPair>
+               |  <objPair> ',' <objPairList>
+
+<objPair> ::= <string> ':' <value>
+
+<array> ::= '[' ']'
+         |  '[' <valueList> ']'
+
+<valueList> ::= <value>
+             |  <value> ',' <valueList>
+
+<value> ::= <string>
+         |  <number>
+         |  <object>
+         |  <array>
+         |  <singleton>
+
+<string> ::= '"' ... '"'
+
+<number> ::= ...
+
+<singleton> ::= 'true'
+             |  'false'
+             |  'null'
